@@ -1,3 +1,4 @@
+# This program is to add numbers from 1 to entered number
 x = int(input("enter the number"))
 print ("you entered",x)
 s = 0
