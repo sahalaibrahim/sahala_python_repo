@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <!--link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+</head>
+<h1>Weather App</h1>
+<body>
+    <div class="main" >
+        <form class="pure-form" method="POST" action="/weather">
+            enter the lattitude:<br>
+            <input type="text" name="lattitude"><br>
+            enter the longitude:<br>
+            <input type="text" name="longitude"><br>
+            <button type="submit" class="pure-button pure-button-primary"value="submit">submit</button>
+        </form>
+
+    </div>
+
+    <div class="main">
+
+        {% if temperature %}
+          <p>  Temperature is {{temperature}} </p>
+        {% endif %}
+</div>
+    
+</body>
+</html>
