@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" width="device-width, initial-scale=1.0">
+        
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+    
+            h1 {
+                text-align: center;
+            }
+    
+            form {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+    
+            label {
+                margin-right: 10px;
+            }
+    
+            input[type="text"] {
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                margin-right: 10px;
+            }
+    
+            .weather-info {
+                border: 1px solid #ddd;
+                padding: 10px;
+                margin-bottom: 20px;
+            }
+    
+            .weather-info h2 {
+                text-align: center;
+            }
+        </style> 
+    </head>
+    <body>
+        <div>
+            <h1>Weather app</h1>
+        </div>
+        {% if homePage %}
+            <div>
+                <form method="POST" action="/">
+
+                <label for="latitude">Latitude :</label>
+                <input type="text" name="latitude">
+
+                <label for="longitude">Longitude :</label>
+                <input type="text"name=longitude>
+
+                <button type="submit">Get Weather</button>
+
+            </form>
+
+            </div>
+        {% else %}
+        <div class="weather-info">
+            {% if temp_celsius %}
+                <h2> City        :{{city_name}}    </h2>
+                <p> temperature :{{temp_celsius}} c</p>
+                <p> Weather     :{{weather}} </p>
+                
+                <img src="http://openweathermap.org/img/w/{{icon}}.png" alt="Weather Icon">
+
+            {% endif %}
+            {%if error_message%}
+              <p>error :{{error_message}}</p>
+            {% endif %}
+        </div>
+        {% endif %}
+    </body>
+
+</html>
