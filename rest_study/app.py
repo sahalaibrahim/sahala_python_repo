@@ -103,18 +103,18 @@ def bad_request_error(error):
     return jsonify({'error': 'Bad request'}), 400
 
 def delete_pet(pet_id):
-    # Query the database to find the pet with the given ID
+    
     pet = Pet.query.get(pet_id)
     
-    # If the pet doesn't exist, return a 404 error
+    
     if pet is None:
         return jsonify({'error': 'Pet not found'}), 404
     
-    # Delete the pet from the database
+    
     db.session.delete(pet)
     db.session.commit()
     
-    # Return a success message
+    
     return jsonify({'message': 'Pet deleted successfully'}), 200
 
 
