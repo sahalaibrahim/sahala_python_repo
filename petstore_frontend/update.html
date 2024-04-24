@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Store Frontend</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-semibold mb-4">Welcome to Our Pet Store</h1>
+        <form id="updatePetForm" class="mt-4">
+            <h2 class="text-lg font-semibold mb-2">Update Pet</h2>
+            <div class="mb-4">
+                <label for="updatePetId" class="block text-sm font-medium text-gray-700">Pet ID</label>
+                <input type="number" id="updatePetId" name="updatePetId" class="mt-1 p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div class="mb-4">
+                <label for="updatePetName" class="block text-sm font-medium text-gray-700">New Name</label>
+                <input type="text" id="updatePetName" name="updatePetName" class="mt-1 p-2 border border-gray-300 rounded-md" >
+            </div>
+            <div class="mb-4">
+                <label for="updateCategoryId" class="block text-sm font-medium text-gray-700">Category ID</label>
+                <input type="number" id="updateCategoryId" name="updateCategoryId" class="mt-1 p-2 border border-gray-300 rounded-md" >
+            </div>
+            <div class="mb-4">
+                <label for="updateCategoryName" class="block text-sm font-medium text-gray-700">Category Name</label>
+                <input type="text" id="updateCategoryName" name="updateCategoryName" class="mt-1 p-2 border border-gray-300 rounded-md" >
+            </div>
+            <div class="mb-4">
+                <label for="updatePhotoUrl" class="block text-sm font-medium text-gray-700">Photo URL</label>
+                <input type="text" id="updatePhotoUrl" name="updatePhotoUrl" class="mt-1 p-2 border border-gray-300 rounded-md" >
+            </div>
+            <div class="mb-4">
+                <label for="updateTagId" class="block text-sm font-medium text-gray-700">Tag ID</label>
+                <input type="number" id="updateTagId" name="updateTagId" class="mt-1 p-2 border border-gray-300 rounded-md" >
+            </div>
+            <div class="mb-4">
+                <label for="updateTagName" class="block text-sm font-medium text-gray-700">Tag Name</label>
+                <input type="text" id="updateTagName" name="updateTagName" class="mt-1 p-2 border border-gray-300 rounded-md" >
+            </div>
+            <div class="mb-4">
+                <label for="updateStatus" class="block text-sm font-medium text-gray-700">Status</label>
+                <input type="text" id="updateStatus" name="updateStatus" class="mt-1 p-2 border border-gray-300 rounded-md">
+            </div>
+            <button type="submit" id="updatepetbtn" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Update Pet</button>
+        </form>
+        
+    <div id="petList2" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

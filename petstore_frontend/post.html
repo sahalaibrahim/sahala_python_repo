@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Store Frontend</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-semibold mb-4">Welcome to Our Pet Store</h1>
+
+        
+        <form id="petForm" class="mb-4">
+            <div class="mb-2">
+                <label for="petId" class="block">Pet ID:</label>
+                <input type="number" id="petId" name="petId" class="rounded border border-gray-400 p-2" required>
+            </div>
+            <div class="mb-2">
+                <label for="petName" class="block">Pet Name:</label>
+                <input type="text" id="petName" name="petName" class="rounded border border-gray-400 p-2">
+            </div>
+            <div class="mb-2">
+                <label for="categoryId" class="block">Category ID:</label>
+                <input type="number" id="categoryId" name="categoryId" class="rounded border border-gray-400 p-2">
+            </div>
+            <div class="mb-2">
+                <label for="categoryName" class="block">Category Name:</label>
+                <input type="text" id="categoryName" name="categoryName" class="rounded border border-gray-400 p-2">
+            </div>
+            <div class="mb-2">
+                <label for="photoUrl" class="block">Photo URL:</label>
+                <input type="text" id="photoUrl" name="photoUrl" class="rounded border border-gray-400 p-2">
+            </div>
+            <div class="mb-2">
+                <label for="tagId" class="block">Tag ID:</label>
+                <input type="number" id="tagId" name="tagId" class="rounded border border-gray-400 p-2">
+            </div>
+            <div class="mb-2">
+                <label for="tagName" class="block">Tag Name:</label>
+                <input type="text" id="tagName" name="tagName" class="rounded border border-gray-400 p-2">
+            </div>
+            <div class="mb-2">
+                <label for="status" class="block">Status:</label>
+                <input type="text" id="status" name="status" class="rounded border border-gray-400 p-2">
+            </div>
+            <button type="submit"id="addPetBtn" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">add Pet</button>
+        </form>
+        
+        
+        <div id="petList2" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </div>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
